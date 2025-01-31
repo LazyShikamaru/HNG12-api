@@ -7,6 +7,7 @@ This is a simple API that returns the following:
 
 ## Setup Instructions
 
+
 1. Clone the repository.
 2. Create a virtual environment: `python -m venv venv`.
 3. Activate the virtual environment:
@@ -26,3 +27,9 @@ This is a simple API that returns the following:
     "current_datetime": "2025-01-30T09:30:00Z",
     "github_url": "https://github.com/LazyShikamaru/hng12-api"
   }
+
+Deployment
+This API is deployed on Vercel: https://your-app.vercel.app/
+
+## Backlink
+[HNG Hire Python Developers](https://hng.tech/hire/python-developers)
