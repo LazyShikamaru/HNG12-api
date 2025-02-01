@@ -1,18 +1,20 @@
-from flask import Flask, jsonify  # Import Flask for web server and jsonify for JSON response
-from datetime import datetime  # Import datetime to get current time
+from flask import Flask, jsonify
+from datetime import datetime
+from flask_cors import CORS  # Import CORS
 
-# Create a Flask application
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
-# Define the API endpoint
 @app.route('/', methods=['GET'])
 def get_info():
+    email = "joshbosseisfresh@gmail.com"
+    current_datetime = datetime.utcnow().isoformat() + "Z"
+    github_url = "https://github.com/LazyShikamaru/HNG12-api"
     return jsonify({
-        "email": "joshbosseisfresh@gmail.com", 
-        "current_datetime": datetime.utcnow().isoformat() + "Z",  # Get current UTC time
-        "github_url": "https://github.com/LazyShikamaru/HNG12-api"  # Replace with your GitHub repo URL
+        "email": email,
+        "current_datetime": current_datetime,
+        "github_url": github_url
     })
 
-# Run the Flask app (if this file is run directly)
 if __name__ == '__main__':
     app.run(debug=True)
